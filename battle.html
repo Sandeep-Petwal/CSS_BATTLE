@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BATTLES</title>
+    <link rel="stylesheet" href="battle.css">
+    <script src="unpkg.com_scrollreveal@4.0.9_dist_scrollreveal.js"></script>
+
+    <style>
+        img {
+            filter: invert(100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="battles">
+        <!-- adidas -->
+        <div class="adidas flx b">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div3"></div>
+            <div class="text">
+                adidas
+            </div>
+        </div>
+
+
+        <!-- 01. https://cssbattle.dev/play/140 -->
+        <div class="b1 b flx">
+            <div class="div1"></div>
+            <div class="div2"></div>
+        </div>
+
+        <!-- 02.  -->
+        <div class="b2 b flx">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div3"></div>
+        </div>
+
+        <!-- 02. -->
+        <div class="b3 b flx">
+            <div class="div1"></div>
+            <div class="stick"></div>
+        </div>
+
+        <div class="b4 b">
+        </div>
+        <div class="b4 b">
+        </div>
+        <div class="b4 b">
+        </div>
+        <div class="b4 b">
+        </div>
+        <div class="b4 b">
+        </div>
+        <div class="b4 b">
+        </div>
+        <div class="b4 b">
+        </div>
+        <div class="b4 b">
+        </div>
+        <div class="b4 b">
+        </div>
+    </div>
+
+
+
+    <script>
+        var slideUp = {
+            distance: '150%',
+            origin: ' right',
+            opacity: null
+        };
+        var slide2 = {
+            distance: '150%',
+            origin: 'left',
+            opacity: null
+        };
+
+        ScrollReveal().reveal('.b', slide2);
+        ScrollReveal().reveal('.div1,.div2,.div3', slideUp);
+    </script>
+</body>
+
+</html>

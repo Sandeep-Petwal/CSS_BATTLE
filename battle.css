@@ -1,0 +1,199 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #e5e5f7;
+    /* opacity: ; */
+    background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 12.5px 12.5px, linear-gradient(#444cf7 1px, transparent 1px) 0 -0.5px, linear-gradient(90deg, #444cf7 1px, #e5e5f7 1px) -0.5px 0;
+    background-size: 25px 25px, 25px 25px, 12.5px 12.5px, 12.5px 12.5px;
+}
+
+
+@keyframes flip-vertical-left {
+    0% {
+        transform: rotateY(90deg);
+    }
+
+    0% {
+        transform: rotateY(180deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+
+    }
+}
+
+.flx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.battles {
+    margin-top: 50px;
+    padding: 20px;
+    border: 2px solid gray;
+    display: grid;
+    place-items: center;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.b {
+    visibility: hidden;
+    border-radius: 5px;
+    position: relative;
+    background-color: powderblue;
+    box-shadow: 0px 0px 7px rgb(36, 41, 119);
+    height: 300px;
+    width: 400px;
+    border: 1px solid green;
+}
+.b:hover {
+    /* animation: flip-vertical-left 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both; */
+    box-shadow: 0px 0px 10px rgb(36, 41, 119);
+}
+
+/* adidas */
+.adidas {
+    background-color: black;
+    color: white;
+    gap: 15px;
+    flex-direction: row;
+}
+
+.adidas div {
+    position: relative;
+    left: -8px;
+    background-color: white;
+    width: 40px;
+    transform: rotate(-30deg);
+}
+
+.adidas .div1 {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 17px);
+    height: 40px;
+    top: 24.8px;
+}
+
+.adidas .div2 {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 57px);
+    height: 80px;
+    top: 7.3px;
+}
+
+.adidas .div3 {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 97px);
+    height: 120px;
+    top: -10px;
+}
+
+.adidas>.text {
+    bottom: 44px;
+    left: 22%;
+    font-family: adidas_font, sans-serif;
+    font-size: 65px;
+    position: absolute;
+    background-color: transparent;
+    transform: rotate(0deg);
+
+}
+
+@font-face {
+    font-family: 'adidas_font';
+    /* Give your font a unique name */
+    src: url('Adidas-font.woff') format('woff');
+    /* WOFF2 format */
+    font-weight: normal;
+    font-style: normal;
+}
+@media only screen and (max-width: 400px) {
+    /* Your CSS rules for mobile devices go here */
+    body{
+        background-color: red;
+        display: block;
+    }
+    .b{
+        width: 90vw !important;
+    }
+    .battles{
+        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    
+    }
+}
+
+
+
+/* battle 1 */
+.b1 {
+    overflow: hidden;
+    background-color: #4F77FF;
+}
+
+.b1>.div1 {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 0px -35px 0px 0px white;
+}
+
+.b1>.div2 {
+    transform: rotate(45deg);
+    position: relative;
+    bottom: -140px;
+    background-color: #1038BF;
+    height: 250px;
+    width: 250px;
+    position: absolute;
+
+}
+
+/* battle 2 */
+.b2 {
+    flex-direction: row;
+    background-color: #926926;
+}
+
+.b2>div {
+    background-color: #6D480B;
+    height: 100px;
+    width: 100px;
+}
+
+.b2>.div1 {
+    border-radius: 0px 100%;
+}
+
+.b2>.div2 {
+    border-radius: 100% 0px;
+}
+
+.b2>.div3 {
+    position: absolute;
+    top: 79px;
+    background-color: white;
+    border-radius: 100% 0px;
+    transform: rotate(-45deg);
+}
+
+/* battle 3 */
+.b3 {
+    background-color: #E38F66;
+}
+
+.b3>.div1 {
+    background-color: #FFFBDA;
+    height: 110px;
+    width: 130px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.b3>.stick {
+    position: absolute;
+    bottom: 0px;
+    height: 95px;
+    width: 10px;
+    background-color: #61306D;
+}
